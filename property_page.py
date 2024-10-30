@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # Load the property URLs from the JSON file
-with open('property_urls.json', 'r') as f:
+with open('json_files/property_urls.json', 'r') as f:
     property_urls = json.load(f)
 
 # Set up Chrome options
@@ -52,7 +52,7 @@ def find_trakheesi_urls():
             print(f"Failed to find data for {url}: {e}")
 
     # Save property information to a JSON file
-    with open('properties_info.json', 'w') as f:
+    with open('json_files/properties_info.json', 'w') as f:
         json.dump(properties_info, f, indent=4)
 
     driver.quit()

@@ -89,7 +89,7 @@ try:
         urls.append(property_card.get_attribute('href'))  # Get the property link
 
     # Save URLs to a JSON file
-    with open('property_urls.json', 'w') as f:
+    with open('json_files/property_urls.json', 'w') as f:
         json.dump(urls, f)
     print(f"Saved property URLs: {urls}")
 
